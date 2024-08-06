@@ -1,0 +1,102 @@
+.hangman-container {
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  
+  .hangman {
+    position: relative;
+    width: 60px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  /* Rope */
+  .hangman-rope {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100px;
+    background: black;
+  }
+  
+  /* Head */
+  .hangman-head {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: black;
+    position: relative;
+    top: 10px;
+  }
+  
+  /* Body */
+  .hangman-body {
+    width: 2px;
+    height: 60px;
+    background: black;
+    position: relative;
+    top: 10px;
+  }
+  
+  /* Arms */
+  .hangman-arm-left,
+  .hangman-arm-right {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: black;
+    top: 20px;
+  }
+  
+  .hangman-arm-left {
+    left: -40px;
+    transform: rotate(-45deg);
+  }
+  
+  .hangman-arm-right {
+    right: -40px;
+    transform: rotate(45deg);
+  }
+  
+  /* Legs */
+  .hangman-leg-left,
+  .hangman-leg-right {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: black;
+    top: 70px;
+  }
+  
+  .hangman-leg-left {
+    left: -20px;
+    transform: rotate(45deg);
+  }
+  
+  .hangman-leg-right {
+    right: -20px;
+    transform: rotate(-45deg);
+  }
+  
+  /* Swinging Animation */
+  .swinging .hangman {
+    animation: swing 1s infinite;
+  }
+  
+  @keyframes swing {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
